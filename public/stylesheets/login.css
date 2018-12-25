@@ -1,0 +1,21 @@
+#container-fb-btn{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#facebookBtn {
+    background: white;
+    color: #3b5998;
+    width: 100%;
+    line-height: 40px;
+    max-width: 260px;
+    margin: auto;
+    border-radius: 6px;
+    border: 1px solid #4C69BA;
+    transition: 0.2s linear;
+}
+
+#facebookBtn:hover {
+    background: #3b5998;
+    color: white;
+}

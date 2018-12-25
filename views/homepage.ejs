@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>McDonald Homepage</title>
+  <link rel="stylesheet" href="../public/stylesheets/homepage.css">
+  <%- include('./partials/head') %>
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- Navigation Bar -->
+  <%- include('./partials/navbar') %>
+  <!-- End Navigation Bar -->
+
+  <!-- Header -->
+  <br>
+  <header class="w3-display-container w3-content" style="max-width:750; height: auto;">
+    <img class="w3-image" src="../public/images/mcdonal.jpg" alt="McDonald" style="min-width:500" height="200">
+  </header>
+
+  <br>
+  <br>
+  <!-- Page content -->
+  <%- include('./partials/homepage/page-content') %>
+  <!-- End Page content -->
+
+  <!-- Footer -->
+  <%- include('./partials/homepage/footer') %>
+  <!-- End Footer -->
+  <script>
+    $(document).ready(function () {
+      $.datetimepicker.setLocale('en');
+      $('#datetimepicker').datetimepicker();
+    });
+  </script>
+
+  <script>
+    let toggleMenu = () => {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += "responsive";
+      } else {
+        x.className = "topnav";
+      }
+    };
+  </script>
+</body>
+
+</html>
