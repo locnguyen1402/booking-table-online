@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const crypto = require('crypto');
 const User = require('../models/installAccount');
+const sesssion = require('express-session');
+
+router.use(sesssion({secret : 'anhlocanh97'}));
+
 /* GET login page. */
 router.get('/', function (req, res) {
     res.render('login');
@@ -16,6 +20,8 @@ router.post('/', (req, res)=>{
         if(err) throw err;
         // kiểm tra xem password có đúng ko
         if(hashPassword == docs[0].password){
+            req.session.email = docs[0].email;
+            req.session.name = docs[0].fullname;     
             res.status(200).json({
                 message: "correct"
             });

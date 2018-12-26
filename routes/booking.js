@@ -4,7 +4,17 @@ const mcdonaldDB = require('../models/db');
 
 /* GET booking page. */
 router.get('/', function (req, res) {
-  res.render('booking');
+  if (req.session.email) {
+    res.render('booking', {
+      name: req.session.name,
+      email: req.session.email
+    });
+  } else {
+    res.render('booking', {
+      name: '',
+      email: ''
+    });
+  }
 });
 
 router.post('/', function (req, res) {

@@ -44,10 +44,12 @@
 
         // Click functions for popup
         $('.open-popup').click(function () {
-            $('#' + $(this).data('id')).openPopup({
+            if(!checkLogin()){
+                $('#' + $(this).data('id')).openPopup({
                 anim: (!$(this).attr('data-animation') || $(this).data('animation') == null) ? 'fade' :
                     $(this).data('animation')
             });
+            }
         });
         $('.close-popup').click(function () {
             $('#' + $(this).data('id')).closePopup({
@@ -55,6 +57,11 @@
                     $(this).data('animation')
             });
         });
+
+        let checkLogin = () => {
+            let hiddenEmail = document.querySelector('#statusUser');
+            return hiddenEmail.innerHTML == '';
+        }
     </script>
 
     <script>
@@ -90,7 +97,7 @@
             if(checkDateTime()){
                 if(!checkValidForm()){
                     postFormBooking(getFormBooking(store_id, mcdonald_date_form.value, mcdonald_time_form.value, mcdonald_capacity_form.value, mcdonald_fullname_form.value, mcdonald_email_form.value, mcdonald_phone_form.value));
-                    console.log('da book');
+                    //console.log('da book');
                 }
                 else{
                     alert('Please fill in the form');
@@ -109,18 +116,20 @@
                 popup[i].value = `store${i}`;
             }
             popup[i].onclick = () => {
-                store_id = popup[i].value;
-                $('html,body').animate({
-                    scrollTop: 0
-                }, 'slow');
-                //console.log(store[i]);
-                timeBooking(i, store[i].time_open, store[i].time_close);
-                return false;
+                if(checkLogin()){
+                    alert('Please log in before booking')
+                }else{
+                    store_id = popup[i].value;
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 'slow');
+                    timeBooking(i, store[i].time_open, store[i].time_close);
+                    return false;
+                }
             };
         }
 
-        //xử lý giờ trong khoảng từ lúc mở tới trước khi đóng cửa 1 tiếng
-        //(c-o)*2-1                   
+        //xử lý giờ trong khoảng từ lúc mở tới trước khi đóng cửa 1 tiếng 30 phút           
         let timeBooking = ((index, open, close)=>{
             $('#mcdonald-time-form option').remove();
             //console.log(index);
@@ -147,9 +156,7 @@
                 value++;
             }            
         });
-
-        
-        
+      
         // xử lý ngày của booking form... chỉ được đặt 3 ngày kế
         let setDate = () => {
             let day = new Date();
@@ -229,7 +236,7 @@
             if(datetime.getMinutes() < 10){
                 currentMinute = `0${datetime.getMinutes()}`;
             }else currentMinute = `${datetime.getMinutes()}`;
-            console.log(currentHour + currentMinute);
+            
             currentTime = `${currentHour}:${currentMinute}`;
             
             let currentDate = datetime.toLocaleDateString('en-US');
@@ -249,6 +256,11 @@
             }
         };
 
+        //kiểm tra đã đăng nhập chưa, true => chưa login
+        let checkLogin = () => {
+            let hiddenEmail = document.querySelector('#statusUser');
+            return hiddenEmail.innerHTML == '';
+        }
     </script>
 </body>
 

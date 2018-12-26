@@ -4,20 +4,11 @@ const sesssion = require('express-session');
 
 router.use(sesssion({secret : 'anhlocanh97'}));
 
-/* GET home page. */
+/* GET login page. */
 router.get('/', function (req, res) {
-  if (req.session.email) {
-    res.render('homepage', {
-      name: req.session.name,
-      email: req.session.email
-    });
-  } else {
-    res.render('homepage', {
-      name: '',
-      email: ''
-    });
-  }
-
+    req.session.destroy();
+    res.redirect('/');
 });
+
 
 module.exports = router;

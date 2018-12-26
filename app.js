@@ -7,6 +7,7 @@ const logger = require('morgan');
 const homepageRouter = require('./routes/homepage');
 const bookingRouter = require('./routes/booking');
 const loginRouter = require('./routes/login');
+const logoutRouter = require('./routes/logout');
 const registerRouter = require('./routes/register');
 const cartRouter = require('./routes/cart');
 
@@ -30,6 +31,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/', homepageRouter);
 app.use('/booking', bookingRouter);
 app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
 app.use('/register', registerRouter);
 app.use('/cart', cartRouter);
 
