@@ -198,4 +198,7 @@ function cancelProcess(store_id, day, time, tableArray) {
 //bookingProcess('store00', '12/26/2018', '00:00', 6, 'res');
 //cancelProcess('store00', '12/26/2018', '00:00', ['tb3', 'tb4']);
 
-//module.exports = mcdonald_db;
+module.exports = {
+    bookingProcess : bookingProcess,
+    cancelProcess : cancelProcess
+};

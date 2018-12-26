@@ -204,13 +204,15 @@
             let currentHour = '';
             let currentMinute = '';
             if(datetime.getHours() < 10){
-                currentHour = `0${datetime.getHours()}}`;
-            }else currentHour = `${datetime.getHours()}}`;
-            if(datetime.getMinutes() < 10){
-                currentTime = `0${datetime.getMinutes()}}`;
-            }else currentTime = `${datetime.getMinutes()}}`;
+                currentHour = `0${datetime.getHours()}`;
+            }else currentHour = `${datetime.getHours()}`;
 
+            if(datetime.getMinutes() < 10){
+                currentMinute = `0${datetime.getMinutes()}`;
+            }else currentMinute = `${datetime.getMinutes()}`;
+            console.log(currentHour + currentMinute);
             currentTime = `${currentHour}:${currentMinute}`;
+            
             let currentDate = datetime.toLocaleDateString();
             //console.log(currentTime, currentDate);
             if(mcdonald_date_form.value > currentDate){
