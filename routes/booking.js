@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   const store = getFormBooking(req.body);
-  mcdonaldDB.bookingProcess(store.id, store.date, store.time, store.capacity, 'res');
+  mcdonaldDB.bookingProcess(store.id, store.date, store.time, store.capacity, res);
 });
 
 let getFormBooking = (reqBody) => {
