@@ -7,6 +7,7 @@ const logger = require('morgan');
 const homepageRouter = require('./routes/homepage');
 const bookingRouter = require('./routes/booking');
 const loginRouter = require('./routes/login');
+const registerRouter = require('./routes/register');
 const cartRouter = require('./routes/cart');
 
 // init express constructor
@@ -29,6 +30,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/', homepageRouter);
 app.use('/booking', bookingRouter);
 app.use('/login', loginRouter);
+app.use('/register', registerRouter);
 app.use('/cart', cartRouter);
 
 // catch 404 and forward to error handler

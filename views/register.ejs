@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="../public/stylesheets/register.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Create Account</h4>
+                <p class="text-center">Get started with your free account</p>
+                <p>
+                    <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
+                    <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via
+                        facebook</a>
+                </p>
+                <p class="divider-text">
+                    <span class="bg-light">OR</span>
+                </p>
+                <div>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input id="register-fullname" value="" class="form-control" placeholder="Full name" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input id="register-email" value="" class="form-control" placeholder="Email address" type="email">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <select class="custom-select" style="max-width: 120px;">
+                            <option value="vietnam">+84</option>
+                        </select>
+                        <input id="register-phone" value="" class="form-control" placeholder="Phone number" type="text">
+                    </div> <!-- form-group// -->
+                    <!-- form-group end.// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input id="register-password" value="" class="form-control" placeholder="Create password" type="password">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input id="register-repeat" value="" class="form-control" placeholder="Repeat password" type="password">
+                    </div> <!-- form-group// -->
+                    <div class="form-group">
+                        <button id="register-btnRegister" class="btn btn-primary btn-block"> Create
+                            Account </button>
+                    </div> <!-- form-group// -->
+                    <p class="text-center">Have an account? <a href="/login">Log In</a> </p>
+                </div>
+            </article>
+        </div> <!-- card.// -->
+
+    </div>
+    <!--container end.//-->
+
+    <script>
+        let fullname = document.querySelector('#register-fullname');
+        let email = document.querySelector('#register-email');
+        let phone = document.querySelector('#register-phone');
+        let password = document.querySelector('#register-password');
+        let repeat = document.querySelector('#register-repeat');
+
+        let btnRegister = document.querySelector('#register-btnRegister');
+
+        btnRegister.addEventListener('click', () => {
+            if (!checkEmpty(fullname, email, phone, password, repeat)) {
+                alert('please fill in the form to register');
+            } else {
+                // kiểm tra thông tin có hợp lệ không
+                if (isInfoValid(email, phone)) {
+                    // kiểm tra password có đúng ko
+                    if (isPasswordEqual(password, repeat)) {
+                        let user = {
+                            id: 'user00', //=================// cần 1 phương pháp tốt ưu cho ID của user
+                            fullname: fullname.value,
+                            email: email.value,
+                            phone: phone.value,
+                            password: password.value,
+                        };
+                        $.ajax({
+                            type: "POST",
+                            url: '/register',
+                            data: JSON.stringify(user),
+                            contentType: 'application/json',
+                            dataType: "json",
+                            success: function (res) {
+                                console.log(res.message);
+                                if (res.message == 'Exists') {
+                                    alert('This email already created by another user');
+                                    // highlight password cho người dùng dễ thấy
+                                    email.style.border = '1px solid red';
+                                } else if (res.message == 'Create') {
+                                    alert('Your account has been created');
+                                    // ko highlight
+                                    email.style.border = '1px solid #d3d3d3';
+                                    // chuyển trang
+                                    window.location.href = '/login';
+                                }
+                            },
+                            error: function (error) {
+                                alert(error);
+                            }
+                        });
+                        console.log(user);
+                    } else alert('Your password is invalid');
+                } else alert('Your info is invalid. Please check again');
+
+            }
+        });
+
+        // kiểm tra xem người dùng đã nhập chưa
+        let checkEmpty = (fullname, email, phone, password, repeat) => {
+            return (fullname.value != '' && email.value != '' && phone.value != '' && password.value != '' &&
+                repeat.value != '');
+        };
+
+        // kiểm tra xem password người dùng nhập có đúng ko
+        let isPasswordEqual = (password, repeat) => {
+            return password.value === repeat.value ? true : false;
+        }
+
+        // kiểm tra email và số điện thoại có hợp lệ không
+        // SĐT phải là số việt nam
+        let isInfoValid = (email, phone) => {
+            let reEmail =
+                /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            let rePhone = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+            return (reEmail.test(email.value) && rePhone.test(phone.value));
+        }
+    </script>
+</body>
+
+</html>
