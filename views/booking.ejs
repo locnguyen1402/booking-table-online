@@ -190,7 +190,9 @@
             contentType: 'application/json',
             dataType: "json",
             success: function (mess) {
-                console.log('thanhcong: ' + mess);
+                let res = JSON.stringify(mess);
+                let info = JSON.parse(res);
+                console.log(info);
             },
             error: function (error) {
                 alert(error);

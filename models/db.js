@@ -106,9 +106,6 @@ function findFeasibleNumberOfTables(indexTime, store, amoutOfTables) {
         if (store[`tb${i+1}`].status[indexTime] == false && store[`tb${i+1}`].status[indexTime + 3] == false) {
             tableArray.push(`tb${i+1}`);
         }
-        if (tableArray.length == amoutOfTables) {
-            break;
-        }
     }
     return tableArray;
 }
@@ -138,22 +135,43 @@ function bookingProcess(store_id, day, time, capacity, res) {
     let dayKey = checkDate(day);
 
     if (dayKey == 'nomatch') {
-        console.log('ngay khong phu hop');
-        //res.json('something');
+        //console.log('ngay khong phu hop');
+        res.json({
+            type: 'invalid',
+            store_id: store_id,
+            day: day,
+            time: time,
+            capacity: capacity,
+            message: 'no match datetime'
+        });
     } else {
         //ngày phù hợp để đặt, kiểm tra tiếp
         getValidStore(store_id, dayKey).then((store) => {
             if (store.length == 0) {
                 //không có cửa hàng nên ko đặt được
-                console.log('không có cửa hàng nên ko đặt được');
-                //res.json('something');
+                //console.log('không có cửa hàng nên ko đặt được');
+                res.json({
+                    type: 'invalid',
+                    store_id: store_id,
+                    day: day,
+                    time: time,
+                    capacity: capacity,
+                    message: 'no match store',
+                });
             } else {
                 //kiểm tra có đủ bàn đặt ko
                 let tableArray = findFeasibleNumberOfTables(indexTime, store[0][`${dayKey}`]); // mảng bàn có thể đặt
                 if (tableArray.length < amoutOfTables) {
                     //không đủ bàn
                     console.log('không đủ bàn');
-                    //res.json('something');
+                    res.json({
+                        type: 'invalid',
+                        store_id: store_id,
+                        day: day,
+                        time: time,
+                        capacity: capacity,
+                        message: 'not enough table'
+                    });
                 } else {
                     //đủ bàn => đặt bàn
                     let tempObj = {};
@@ -164,7 +182,14 @@ function bookingProcess(store_id, day, time, capacity, res) {
                     bookingOrcancel(store[0].id, tempObj).then(() => {
                         console.log('updated');
                         //nên trả về mảng các bàn đã đặt để cancel => tableArray.slice(0,amoutOfTables);
-                        //res.json('something');
+                        res.json({
+                            type: 'valid',
+                            store_id: store_id,
+                            day: day,
+                            time: time,
+                            capacity: capacity,
+                            message: tableArray.slice(0, amoutOfTables)
+                        });
                     });
                 }
             }
@@ -199,6 +224,6 @@ function cancelProcess(store_id, day, time, tableArray) {
 //cancelProcess('store00', '12/26/2018', '00:00', ['tb3', 'tb4']);
 
 module.exports = {
-    bookingProcess : bookingProcess,
-    cancelProcess : cancelProcess
+    bookingProcess: bookingProcess,
+    cancelProcess: cancelProcess
 };
