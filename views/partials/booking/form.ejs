@@ -83,5 +83,39 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-preview" id="info-confirm" style="display:none;">
+            <div class="confirm form-confirm">
+                <h3 class='confirm-h3'>Confirm</h3>
+                <p class="confirm-p">Status</p>
+                <input class="w100 input-confirm" type="text" placeholder="Store" id="confirm-store" disabled autocomplete='off' />
+                <input class="w100 input-confirm" type="text" placeholder="Datetime" id="confirm-day" disabled />
+                <input class="w100 input-confirm" type="text" placeholder="Time" id="confirm-time" disabled />
+                <input class="w100 input-confirm" type="text" placeholder="Capacity" id="confirm-capacity" disabled />
+                <input class="w100 input-confirm" type="text" placeholder="Name" id="confirm-name" disabled />
+                <button class="form-btn sx confirm-button-after" type="button">Animation</button>
+                <button class="form-btn dx" type="submit">Confirm</button>
+            </div>
+            <div class="animate form-confirm">
+                <img src="https://i.giphy.com/media/lGiCsPNkHIME/giphy.webp" alt="animate" width="280px;" height="350px;">
+                <button class="form-btn sx back" type="button">Confirm</button>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    $(".confirm-button-after").click(function () {
+        $(".animate").addClass("active-dx");
+        $(".confirm").addClass("inactive-sx");
+        $(".confirm").removeClass("active-sx");
+        $(".animate").removeClass("inactive-dx");
+    });
+
+    $(".back").click(function () {
+        $(".confirm").addClass("active-sx");
+        $(".animate").addClass("inactive-dx");
+        $(".animate").removeClass("active-dx");
+        $(".confirm").removeClass("inactive-sx");
+    });
+</script>
