@@ -1,27 +1,30 @@
-//kiểm tra ngày, return today or tomorrow or thatday or nomatch nếu ngày ko có
-function checkDate(date){
-    let currentday = new Date();
+if (store.length == 0) {
+    //không có cửa hàng nên ko đặt được
+    console.log('không có cửa hàng nên ko đặt được');
+} else {
+    //kiểm tra có đủ bàn đặt ko
+    let tableArray = findFeasibleNumberOfTables(indexTime, store[0][`${dayKey}`]); // mảng bàn có thể đặt
+    if (tableArray.length < amoutOfTables) {
+        //không đủ bàn
+        console.log('không đủ bàn');
+    } else {
+        //đủ bàn
+        //đặt bàn
+        let tempObj = {};
 
-    let nextday = new Date(currentday);
-    nextday.setDate(nextday.getDate()+1);
+        for(let i = 0; i < amoutOfTables; i++){
+            objectUpdate(tempObj, tableArray[i], dayKey, store[0][`${dayKey}`][`${tableArray[i]}`].status, indexTime);
+        }
 
-    let thatday = new Date(nextday);
-    thatday.setDate(thatday.getDate()+1);
-    switch(date.trim()){
-        case currentday.toLocaleDateString("en-US"):{
-            return 'today';
-            break;
-        }
-        case nextday.toLocaleDateString("en-US"):{
-            return 'tomorrow';
-            break;
-        }
-        case thatday.toLocaleDateString("en-US"):{
-            return 'thatday';
-            break;
-        }
-        default : {
-            return 'nomatch';
-        }
+        console.log(tempObj);
+        
+        mcdonald_db.findOneAndUpdate({
+            id: store[0].id
+        }, {
+            $set: tempObj
+        }, (err, doc) => {
+            if (err) throw err;
+            console.log('updated');
+        });
     }
 }

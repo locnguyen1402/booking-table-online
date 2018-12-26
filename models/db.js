@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://mcdonald:anhlocanh97@ds141674.mlab.com:41674/mcdonald_db', {
     useNewUrlParser: true
 });
+
 let StoreSchema = new mongoose.Schema({
     id: String,
     time: Array,
@@ -46,7 +47,7 @@ async function findValidTable(store, time) {
     //vị trí time trong chuỗi
     let index = store.time.indexOf(time);
     for (let i = 0; i < 2; i++) {
-        if (store['today'][`tb${i+1}`].status[index] == false) {
+        if (store['today'][`tb${i+1}`].status[index] == false && store['today'][`tb${i+1}`].status[index + 3] == false) {
             console.log(`tb${i+1}`);
         }
     }
@@ -99,27 +100,30 @@ function checkDate(date) {
 }
 
 //kiểm tra có đủ bàn cần đặt ko, trả về mảng các bàn có thể đặt, chuyền vào index của time và store[0][`${dayKey}`]
-function findFeasibleNumberOfTables(indexTime, store) {
+function findFeasibleNumberOfTables(indexTime, store, amoutOfTables) {
     let tableArray = [];
     for (let i = 0; i < 10; i++) {
-        if (store[`tb${i+1}`].status[indexTime] == false) {
+        if (store[`tb${i+1}`].status[indexTime] == false && store[`tb${i+1}`].status[indexTime + 3] == false) {
             tableArray.push(`tb${i+1}`);
+        }
+        if (tableArray.length == amoutOfTables) {
+            break;
         }
     }
     return tableArray;
 }
 
-//trả về object để đặt bàn, chuyền vào mảng các bàn có thể đặt, số bàn cần đặt, ngày đặt (dayKey)
-function objectUpdate(tempObj, tableArray, dayKey, statusArray, indexTime) {
+//trả về object để đặt bàn, chuyền vào mảng các bàn có thể đặt, số bàn cần đặt, ngày đặt (dayKey), booking = true, cancel = false
+function objectBookingOrCancel(tempObj, tableArray, dayKey, statusArray, indexTime, BookingOrCancel) {
     for (let i = 0; i < 4; i++) {
-        statusArray[indexTime + i] = true;
+        statusArray[indexTime + i] = BookingOrCancel;
     }
 
     tempObj[`${dayKey}.${tableArray}.status`] = statusArray;
 }
 
-//đặt bàn
-async function booking(store_id, tempObj) {
+//đặt bàn hoặc hủy
+async function bookingOrcancel(store_id, tempObj) {
     await mcdonald_db.findOneAndUpdate({
         id: store_id
     }, {
@@ -155,10 +159,11 @@ function bookingProcess(store_id, day, time, capacity, res) {
                     let tempObj = {};
 
                     for (let i = 0; i < amoutOfTables; i++) {
-                        objectUpdate(tempObj, tableArray[i], dayKey, store[0][`${dayKey}`][`${tableArray[i]}`].status, indexTime);
+                        objectBookingOrCancel(tempObj, tableArray[i], dayKey, store[0][`${dayKey}`][`${tableArray[i]}`].status, indexTime, true);
                     }
-                    booking(store[0].id, tempObj).then(() => {
+                    bookingOrcancel(store[0].id, tempObj).then(() => {
                         console.log('updated');
+                        //nên trả về mảng các bàn đã đặt để cancel => tableArray.slice(0,amoutOfTables);
                         //res.json('something');
                     });
                 }
@@ -167,13 +172,30 @@ function bookingProcess(store_id, day, time, capacity, res) {
     }
 }
 
-bookingProcess('store00', '12/26/2018', '00:00', 3, 'res');
+function cancelProcess(store_id, day, time, tableArray) {
+    let indexTime = timeArray.indexOf(time);
+    let dayKey = checkDate(day);
+    getValidStore(store_id, dayKey).then((store) => {
+        if (store.length == 0) {
+            //không có cửa hàng để hủy
+            console.log('không có cửa hàng nên ko hủy được');
+            //res.json('something');
+        } else {
+            let tempObj = {};
 
+            for (let i = 0; i < tableArray.length; i++) {
+                objectBookingOrCancel(tempObj, tableArray[i], dayKey, store[0][`${dayKey}`][`${tableArray[i]}`].status, indexTime, false);
+            }
 
+            bookingOrcancel(store[0].id, tempObj).then(() => {
+                console.log('cancel');
+                //res.json('something');
+            });
+        }
+    });
+}
 
-/* getValidStore('store05', 'today').then((rel) => {
-    console.log(rel);
-    console.log('-----------------------');
-});  */
+//bookingProcess('store00', '12/26/2018', '00:00', 6, 'res');
+//cancelProcess('store00', '12/26/2018', '00:00', ['tb3', 'tb4']);
 
 //module.exports = mcdonald_db;

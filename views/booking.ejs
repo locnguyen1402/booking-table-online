@@ -86,15 +86,15 @@
 
         let btnBooking = document.querySelector('#booking-form');
         btnBooking.onclick = (()=>{
-            console.log(getFormBooking(store_id, mcdonald_date_form.value, mcdonald_time_form.value, mcdonald_capacity_form.value, mcdonald_fullname_form.value, mcdonald_email_form.value, mcdonald_phone_form.value));
+            //console.log(getFormBooking(store_id, mcdonald_date_form.value, mcdonald_time_form.value, mcdonald_capacity_form.value, mcdonald_fullname_form.value, mcdonald_email_form.value, mcdonald_phone_form.value));
             if(checkDateTime()){
                 if(!checkValidForm()){
-                //postFormBooking(getFormBooking(store_id, mcdonald_date_form.value, mcdonald_time_form.value, mcdonald_capacity_form.value, mcdonald_fullname_form.value, mcdonald_email_form.value, mcdonald_phone_form.value));
-                console.log('da book');
-            }
-            else{
-                alert('Please fill in the form');
-            }
+                    postFormBooking(getFormBooking(store_id, mcdonald_date_form.value, mcdonald_time_form.value, mcdonald_capacity_form.value, mcdonald_fullname_form.value, mcdonald_email_form.value, mcdonald_phone_form.value));
+                    console.log('da book');
+                }
+                else{
+                    alert('Please fill in the form');
+                }
             }else{
                 alert('Please check your date and time again !')
             }
@@ -109,7 +109,6 @@
                 popup[i].value = `store${i}`;
             }
             popup[i].onclick = () => {
-                console.log(popup[i].value);
                 store_id = popup[i].value;
                 $('html,body').animate({
                     scrollTop: 0
@@ -186,12 +185,12 @@
         let postFormBooking = (getFormBooking) => {
             $.ajax({
             type: "POST",
-            url: 'http://localhost:3000/booking',
+            url: '/booking',
             data: JSON.stringify(getFormBooking),
             contentType: 'application/json',
             dataType: "json",
             success: function (mess) {
-                console.log(mess);
+                console.log('thanhcong: ' + mess);
             },
             error: function (error) {
                 alert(error);
@@ -213,19 +212,17 @@
 
             currentTime = `${currentHour}:${currentMinute}`;
             let currentDate = datetime.toLocaleDateString();
-            console.log(currentTime, currentDate);
+            //console.log(currentTime, currentDate);
             if(mcdonald_date_form.value > currentDate){
                 //cho book
                 return true;                
             }
             else{
                 if(mcdonald_time_form.value > currentTime){
-                    console.log(true);
                     return true;                   
                 }
                 else {
                     // khong cho book
-                    console.log(false);
                     return false;
                 }
             }
