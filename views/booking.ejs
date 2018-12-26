@@ -193,6 +193,23 @@
                 let res = JSON.stringify(mess);
                 let info = JSON.parse(res);
                 console.log(info);
+                let infoOrder = document.querySelector('#info-order');
+                let infoConfirm = document.querySelector('#info-confirm');
+
+                infoOrder.style.display = 'none';   
+
+                let confirmStore = document.querySelector('#confirm-store');
+                let confirmDay = document.querySelector('#confirm-day');
+                let confirmTime = document.querySelector('#confirm-time');
+                let confirmCapacity = document.querySelector('#confirm-capacity');
+                // let confirmaName = document.querySelector('#confirm-name');
+
+                confirmStore.value = mess.store_id;
+                confirmDay.value = mess.day;
+                confirmTime.value = mess.time;
+                confirmCapacity.value = mess.capacity;
+                             
+                infoConfirm.style.display = 'block';
             },
             error: function (error) {
                 alert(error);
