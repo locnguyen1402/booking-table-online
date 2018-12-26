@@ -6,32 +6,35 @@
     <!-- <option value="0">02:00</option>
     <option value="0">02:30</option>
     <option value="0">03:00</option>
-    <option value="0">03:30</option>
-    <option value="0">04:00</option>
-    <option value="0">04:30</option>
-    <option value="0">05:00</option>
-    <option value="0">05:30</option>
-    <option value="0">06:00</option>
-    <option value="0">06:30</option>
-    <option value="0">07:00</option>
-    <option value="0">07:30</option>
-    <option value="0">08:00</option>
-    <option value="0">08:30</option>
-    <option value="0">09:00</option>
-    <option value="0">09:30</option>
-    <option value="0">10:00</option>
-    <option value="0">10:30</option>
-    <option value="0">11:00</option>
-    <option value="0">11:30</option> -->
+    <option value="0">03:30</option>  -->
 </select>
 
-<!-- <script type="module">
-    import {store} from '../../../public/javascripts/store.js';
-    let timeBooking = (()=>{});
-    let select = document.querySelector('#mcdonald-time-form');
-    let option = document.createElement('OPTION');
-    option.setAttribute('value', '..');
-    let content = document.createTextNode('..');
-    option.appendChild(content);
-    select.appendChild(option);
-</script> -->
+<script>
+    let selecttime = document.querySelector('#mcdonald-time-form');
+    //xử lý giờ trong khoảng từ lúc mở tới trước khi đóng cửa 1 tiếng 30 phút           
+    let timeBooking = ((index, open, close) => {
+        $('#mcdonald-time-form option').remove();
+        //console.log(index);
+        let timerun = open;
+        let value = 0;
+        let content;
+        while (timerun < close - 1) {
+            let option = document.createElement('OPTION');
+            if (Math.floor(value % 2) == 0) {
+                content = document.createTextNode(`${timerun}:00`);
+                if (timerun < 10) {
+                    option.setAttribute('value', `0${timerun}:00`);
+                } else {
+                    option.setAttribute('value', `${timerun}:00`);
+                }
+            } else {
+                content = document.createTextNode(`${timerun}:30`);
+                option.setAttribute('value', `${timerun}:30`);
+                timerun++;
+            }
+            option.appendChild(content);
+            selecttime.appendChild(option);
+            value++;
+        }
+    });
+</script>

@@ -1,3 +1,22 @@
 <select class="form-control" id="mcdonald-date-form" name="mcdonald-date">
     <!-- xử lý bên booking.ejs -->
 </select>
+
+
+
+<script>
+    let selectdate = document.querySelector('#mcdonald-date-form');
+    // xử lý ngày của booking form... chỉ được đặt 3 ngày kế
+    let setDate = () => {
+        let day = new Date();
+        for (let i = 0; i < 3; i++) {
+            let option = document.createElement('OPTION');
+            let nextday = new Date(day);
+            nextday.setDate(nextday.getDate() + i);
+            let content = document.createTextNode(nextday.toLocaleDateString('en-US'));
+            option.appendChild(content);
+            selectdate.appendChild(option);
+        }
+    };
+    setDate();
+</script>
