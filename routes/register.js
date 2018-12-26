@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const crypto = require('crypto');
-const User = require('../models/installAccount');
+const User = require('../models/installUser');
 
 /* GET register page. */
 router.get('/', function (req, res) {
@@ -27,7 +27,6 @@ router.post('/', (req, res) => {
             const hashPassword = crypto.createHmac('sha256', req.body.password).digest('hex');
             console.log(hashPassword);
             new User({
-                id: req.body.id,
                 fullname: req.body.fullname,
                 email: req.body.email,
                 phone: req.body.phone,
