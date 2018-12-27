@@ -18,12 +18,9 @@
         <div class="table card cartdelete">
             <div class="wrapper">
                 <div class="date">
-                    <span class="day">
-                        <%= info[i].day.split('/')[1]%></span>
-                    <span class="month">
-                        <%= info[i].day.split('/')[0]%></span>
-                    <span class="year">
-                        <%= info[i].day.split('/')[2]%></span>
+                    <span class="day"><%= info[i].day.split('/')[1]%></span>
+                    <span class="month"><%= info[i].day.split('/')[0]%></span>
+                    <span class="year"><%= info[i].day.split('/')[2]%></span>
                 </div>
                 <div class="data">
                     <div class="content">
@@ -58,8 +55,10 @@
 
         for (let i = 0; i < handelBookingCart.length; i++) {
             handelBookingCart[i].onclick = () => {
-                //console.log(getDeleteBooking(delStore_id[i].innerHTML, delDay[i].innerHTML, delTime[i].innerHTML, hiddenEmail.innerHTML));
-                postDeleteBooking(getDeleteBooking(delStore_id[i].innerHTML, delDay[i].innerHTML, delTime[i].innerHTML, hiddenEmail.innerHTML), i);              
+                if(confirm('Are you sure to delete?')){
+                    //console.log(getDeleteBooking(delStore_id[i].innerHTML, delDay[i].innerHTML, delTime[i].innerHTML, hiddenEmail.innerHTML));
+                postDeleteBooking(getDeleteBooking(delStore_id[i].innerHTML, delDay[i].innerHTML, delTime[i].innerHTML, hiddenEmail.innerHTML), i);
+                } else return;
             };
         }
 
