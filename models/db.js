@@ -133,7 +133,7 @@ function bookingProcess(store_id, day, time, capacity, email, phone, name, res) 
             day: day,
             time: time,
             capacity: capacity,
-            message: 'no match datetime'
+            message: 'Sorry, please check your day'
         });
     } else {
         //ngày phù hợp để đặt, kiểm tra tiếp
@@ -147,21 +147,21 @@ function bookingProcess(store_id, day, time, capacity, email, phone, name, res) 
                     day: day,
                     time: time,
                     capacity: capacity,
-                    message: 'no match store',
+                    message: 'Sorry, we can find the store you want'
                 });
             } else {
                 //kiểm tra có đủ bàn đặt ko
                 let tableArray = findFeasibleNumberOfTables(indexTime, store[0][`${dayKey}`]); // mảng bàn có thể đặt
                 if (tableArray.length < amoutOfTables) {
                     //không đủ bàn
-                    console.log('không đủ bàn');
+                    //console.log('không đủ bàn');
                     res.json({
                         type: 'invalid',
                         store_id: store_id,
                         day: day,
                         time: time,
                         capacity: capacity,
-                        message: 'not enough table'
+                        message: 'Sorry, we dont have enough table. Please booking another time'
                     });
                 } else {
                     //đủ bàn => đặt bàn
@@ -209,7 +209,6 @@ function cancelProcess(store_id, day, time, email, res) {
     let dayKey = checkDate(day);
     
     getValidStore(store_id, dayKey).then((store) => {
-        console.log(store);
         if (store.length == 0) {
             //không có cửa hàng để hủy
             //console.log('không có cửa hàng nên ko hủy được');

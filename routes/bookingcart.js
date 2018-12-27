@@ -11,7 +11,6 @@ router.use(session({
 router.get('/', function (req, res) {
     if (req.session.email) {
         userBooking.findBookedTableByEmail(req.session.email).then((result) => {
-            console.log(result);
             if (result.length == 0) {
                 res.render('bookingcart', {
                     email: req.session.email,

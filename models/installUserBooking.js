@@ -66,6 +66,7 @@ async function findBookedTableByEmail(email) {
 }
 
 module.exports = {
+    userBooking: userBooking,
     saveUserBooking: saveUserBooking,
     findBookedTable: findBookedTable,
     deleteUserBooking: deleteUserBooking,

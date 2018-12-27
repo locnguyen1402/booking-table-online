@@ -2,1329 +2,4246 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs') %>
-    <link rel="stylesheet" href="../public/stylesheets/admin.css">
-    <title>Admin</title>
+  <%- include('./partials/head.ejs') %>
+  <link rel="stylesheet" href="../public/stylesheets/admin.css">
+  <title>Admin</title>
 </head>
 
 <body>
-    <header>
-        <h1>Admin</h1>
-    </header>
-    <button class="all-stores">McDonald’s Hồng Bàng</button>
-    <div class="flex" id="hongbang" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Âu Cơ</button>
-    <div class="flex" id="auco" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Vincom Thủ Đức</button>
-    <div class="flex" id="thuduc" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Phạm Hùng</button>
-    <div class="flex" id="phamhung" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Hoàng Diệu</button>
-    <div class="flex" id="hoangdieu" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Tân Sơn Nhất</button>
-    <div class="flex" id="tansonnhat" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Saigon Center</button>
-    <div class="flex" id="saigoncenter" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Siêu Thị Sài Gòn</button>
-    <div class="flex" id="sieuthisaigon" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-    <button class="all-stores">McDonald’s Bưu Điện</button>
-    <div class="flex" id="buudien" style="display:none;">
-        <!-- t1 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 1</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t2 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 2</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t3 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 3</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t4 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 4</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t5 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 5</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t6 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 6</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t7 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 7</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t8 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 8</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t9 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 9</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-
-        <!-- t10 -->
-        <section>
-            <img src="https://images.unsplash.com/photo-1483274816418-3975509c8f78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="McDonald's Table" />
-            <h2>Table 10</h2>
-            <aside>
-                <ul>
-                    <li class="status-color">Status</li>
-                    <li class="status">Empty</li>
-                </ul>
-                <button class="btnAdd">Add to Cart</button>
-            </aside>
-        </section>
-    </div>
-
-
-    <script>
-        let status = document.querySelectorAll('.status');
-        let statusColor = document.querySelectorAll('.status-color');
-
-        let btnAdd = document.querySelectorAll('.btnAdd');
-
-        for (let i = 0; i < status.length; i++) {
-            statusColor[i].style.transition = 'all 0.2s linear';
-            if (status[i].innerHTML == 'Empty') {
-                statusColor[i].style.color = 'white';
-                statusColor[i].style.background = '#4AC948';
-            } else if (status[i].innerHTML == 'Full') {
-                statusColor[i].style.color = 'white';
-                statusColor[i].style.background = '#bd0017';
-            }
+  <header>
+    <h1>Admin</h1>
+  </header>
+  <button class="all-stores">McDonald’s Hồng Bàng</button>
+  <table class="customers" id="store00" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Âu Cơ</button>
+  <table class="customers" id="store01" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Vincom Thủ Đức</button>
+  <table class="customers" id="store02" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Phạm Hùng</button>
+  <table class="customers" id="store03" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Hoàng Diệu</button>
+  <table class="customers" id="store04" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Tân Sơn Nhất</button>
+  <table class="customers" id="store05" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Saigon Center</button>
+  <table class="customers" id="store06" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Siêu Thị Sài Gòn</button>
+  <table class="customers" id="store07" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+  <button class="all-stores">McDonald’s Bưu Điện</button>
+  <table class="customers" id="store08" style="display:none;">
+    <tr style="margin-bottom: 5px;">
+      <th>Table</th>
+      <th colspan="46">Time</th>
+    </tr>
+    <!-- tb1 -->
+    <tr id="tb1">
+      <td>tb1</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb2 -->
+    <tr id="tb2">
+      <td>tb2</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb3 -->
+    <tr id="tb3">
+      <td>tb3</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb4 -->
+    <tr id="tb4">
+      <td>tb4</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb5 -->
+    <tr id="tb5">
+      <td>tb5</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb6 -->
+    <tr id="tb6">
+      <td>tb6</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb7 -->
+    <tr id="tb7">
+      <td>tb7</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb8 -->
+    <tr id="tb8">
+      <td>tb8</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+    <!-- tb9 -->
+    <tr id="tb9">
+      <td>tb9</td>
+      <td>0:00</td>
+      <td>0:30</td>
+      <td>1:00</td>
+      <td>1:30</td>
+      <td>2:00</td>
+      <td>2:30</td>
+      <td>3:00</td>
+      <td>3:30</td>
+      <td>4:00</td>
+      <td>4:30</td>
+      <td>5:00</td>
+      <td>5:30</td>
+      <td>6:00</td>
+      <td>6:30</td>
+      <td>7:00</td>
+      <td>7:30</td>
+      <td>8:00</td>
+      <td>8:30</td>
+      <td>9:00</td>
+      <td>9:30</td>
+      <td>10:00</td>
+      <td>10:30</td>
+      <td>11:00</td>
+      <td>11:30</td>
+      <td>12:00</td>
+      <td>12:30</td>
+      <td>13:00</td>
+      <td>13:30</td>
+      <td>14:00</td>
+      <td>14:30</td>
+      <td>15:00</td>
+      <td>15:30</td>
+      <td>16:00</td>
+      <td>16:30</td>
+      <td>17:00</td>
+      <td>17:30</td>
+      <td>18:00</td>
+      <td>18:30</td>
+      <td>19:00</td>
+      <td>19:30</td>
+      <td>20:00</td>
+      <td>20:30</td>
+      <td>21:00</td>
+      <td>21:30</td>
+      <td>22:00</td>
+      <td>22:30</td>
+    </tr>
+
+  </table>
+
+
+  <script>
+    let allStores = document.querySelectorAll('.all-stores');
+    let allStoresArr = ["store00", "store01", "store02",
+      "store03", "store04", "store05",
+      "store06", "store07", "store08"
+    ];
+    for (let i = 0; i < allStores.length; i++) {
+      allStores[i].onclick = () => {
+        $(`#${allStoresArr[i]}`).slideToggle(200);
+      };
+    }
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    let socket = io();
+
+    socket.on('incoming-booking', (res) => {
+      let info = JSON.parse(res);
+      console.log(info);
+
+      let day = new Date();
+      let clientDay = day.toLocaleDateString('en-US');
+
+      if (info.message.length == 1) {
+        if (clientDay === info.day) {
+          $(`#${info.store_id} > #${info.message[0]}`);
+          /*  let td = document.getElementById('tb1');
+          for(let i = 0; i < td.children.length; i++){
+              console.log(td.children[i].innerHTML);
+          } */
         }
-    </script>
-
-    <script>
-        let allStores = document.querySelectorAll('.all-stores');
-        let allStoresArr = ["hongbang", "auco", "thuduc", "phamhung", "hoangdieu", "tansonnhat", "saigoncenter",
-            "sieuthisaigon", "buudien"
-        ];
-        for (let i = 0; i < allStores.length; i++) {
-            allStores[i].onclick = () => {
-                $(`#${allStoresArr[i]}`).slideToggle(500);
-            };
-        }
-    </script>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-    </script>
+      }
+    });
+  </script>
 </body>
 
 </html>

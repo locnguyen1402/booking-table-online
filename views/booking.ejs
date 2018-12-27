@@ -26,7 +26,11 @@
         };
     </script>
 
+    <script src="/socket.io/socket.io.js"></script>
     <script type="module">
+
+        let socket = io();
+
         //list information of store
         import {store} from '../public/javascripts/store.js';
 
@@ -151,9 +155,12 @@
                         confirmTime.value = mess.time;
                         confirmCapacity.value = mess.capacity;
 
-                        
                         infoConfirm.style.display = 'block';
+
+                        socket.emit('db-onchange', JSON.stringify(info));
+                        
                     } else {
+                        alert(info.message);
                         confirmStatus.innerHTML = info.type;
                     }
                 },
