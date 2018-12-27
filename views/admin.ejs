@@ -18,7 +18,7 @@
       <th colspan="46">Time</th>
     </tr>
     <!-- tb1 -->
-    <tr id="tb1">
+    <tr class='store00-tb'>
       <td>tb1</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -69,7 +69,7 @@
     </tr>
 
     <!-- tb2 -->
-    <tr id="tb2">
+    <tr class='store00-tb'>
       <td>tb2</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -120,7 +120,7 @@
     </tr>
 
     <!-- tb3 -->
-    <tr id="tb3">
+    <tr class='store00-tb'>
       <td>tb3</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -171,7 +171,7 @@
     </tr>
 
     <!-- tb4 -->
-    <tr id="tb4">
+    <tr class='store00-tb'>
       <td>tb4</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -222,7 +222,7 @@
     </tr>
 
     <!-- tb5 -->
-    <tr id="tb5">
+    <tr class='store00-tb'>
       <td>tb5</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -273,7 +273,7 @@
     </tr>
 
     <!-- tb6 -->
-    <tr id="tb6">
+    <tr class='store00-tb'>
       <td>tb6</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -324,7 +324,7 @@
     </tr>
 
     <!-- tb7 -->
-    <tr id="tb7">
+    <tr class='store00-tb'>
       <td>tb7</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -375,7 +375,7 @@
     </tr>
 
     <!-- tb8 -->
-    <tr id="tb8">
+    <tr class='store00-tb'>
       <td>tb8</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -426,7 +426,7 @@
     </tr>
 
     <!-- tb9 -->
-    <tr id="tb9">
+    <tr class='store00-tb'>
       <td>tb9</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -3746,7 +3746,7 @@
       <th colspan="46">Time</th>
     </tr>
     <!-- tb1 -->
-    <tr id="tb1">
+    <tr class='store08-tb'>
       <td>tb1</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -3797,7 +3797,7 @@
     </tr>
 
     <!-- tb2 -->
-    <tr id="tb2">
+    <tr class='store08-tb'>
       <td>tb2</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -3848,7 +3848,7 @@
     </tr>
 
     <!-- tb3 -->
-    <tr id="tb3">
+    <tr class='store08-tb'>
       <td>tb3</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -3899,7 +3899,7 @@
     </tr>
 
     <!-- tb4 -->
-    <tr id="tb4">
+    <tr class='store08-tb'>
       <td>tb4</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -3950,7 +3950,7 @@
     </tr>
 
     <!-- tb5 -->
-    <tr id="tb5">
+    <tr class='store08-tb'>
       <td>tb5</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -4001,7 +4001,7 @@
     </tr>
 
     <!-- tb6 -->
-    <tr id="tb6">
+    <tr class='store08-tb'>
       <td>tb6</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -4052,7 +4052,7 @@
     </tr>
 
     <!-- tb7 -->
-    <tr id="tb7">
+    <tr class='store08-tb'>
       <td>tb7</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -4103,7 +4103,7 @@
     </tr>
 
     <!-- tb8 -->
-    <tr id="tb8">
+    <tr class='store08-tb'>
       <td>tb8</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -4154,7 +4154,7 @@
     </tr>
 
     <!-- tb9 -->
-    <tr id="tb9">
+    <tr class='store08-tb'>
       <td>tb9</td>
       <td>0:00</td>
       <td>0:30</td>
@@ -4222,6 +4222,8 @@
 
   <script src="/socket.io/socket.io.js"></script>
   <script>
+    let timeArray = ['00:00', '00:30', '01:00', '01:30', '02:00', '02:30', '03:00', '03:30', '04:00', '04:30', '05:00', '05:30', '06:00', '06:30', '07:00', '07:30', '08:00', '08:30', '09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00', '22:30', '23:00', '23:30', '24:00'];
+    let tableArray = ['tb1', 'tb2', 'tb3', 'tb4','tb5', 'tb6', 'tb7', 'tb8', 'tb9'];
     let socket = io();
 
     socket.on('incoming-booking', (res) => {
@@ -4232,12 +4234,24 @@
       let clientDay = day.toLocaleDateString('en-US');
 
       if (info.message.length == 1) {
-        if (clientDay === info.day) {
-          $(`#${info.store_id} > #${info.message[0]}`);
-          /*  let td = document.getElementById('tb1');
-          for(let i = 0; i < td.children.length; i++){
-              console.log(td.children[i].innerHTML);
-          } */
+        //if (clientDay === info.day) {
+          let indexTime = timeArray.indexOf(info.time);
+          let indexTable = tableArray.indexOf(info.message[0]);
+
+          for(let j = 1; j < 5; j++){
+            let temp = $(`#${info.store_id} tr`).closest(`.${info.store_id}-td`).prevObject[indexTable + 1].children[indexTime + j];
+            temp.style.backgroundColor = 'green';
+          }
+      }
+      else {
+        let indexTime = timeArray.indexOf(info.time);
+
+        for(let i = 0; i<info.message.length; i++){
+          let indexTable = tableArray.indexOf(info.message[i]);
+          for(let j = 1; j < 5; j++){
+            let temp = $(`#${info.store_id} tr`).closest(`.${info.store_id}-td`).prevObject[indexTable + 1].children[indexTime + j];
+            temp.style.backgroundColor = 'green';
+          }
         }
       }
     });
