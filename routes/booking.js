@@ -19,7 +19,7 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   const store = getFormBooking(req.body);
-  mcdonaldDB.bookingProcess(store.id, store.date, store.time, store.capacity, res);
+  mcdonaldDB.bookingProcess(store.id, store.date, store.time, store.capacity, store.email, store.phone, store.fullname, res);
   // đã xong hết các thứ râu ria của form khi ấn thì sẽ query dữ liệu của user
   // khi ấn nút booking thì sẽ add vào 2 db 
   // HIỆN TẠI THÌ CHỈ MỚI ADD 1 DB

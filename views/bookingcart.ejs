@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs')%>
+    <link rel="stylesheet" href="../public/stylesheets/cart.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs')%>
+    <p>Booking Cart</p>
+    <%if(info.length == 0){%>
+    <p>There is no tale booked</p>
+    <%} else {%>
+    <div class="row">
+        <% for(var i=0; i < info.length; i++){ %>
+        <div class="table card cartdelete">
+            <div class="wrapper">
+                <div class="date">
+                    <span class="day">
+                        <%= info[i].day.split('/')[1]%></span>
+                    <span class="month">
+                        <%= info[i].day.split('/')[0]%></span>
+                    <span class="year">
+                        <%= info[i].day.split('/')[2]%></span>
+                </div>
+                <div class="data">
+                    <div class="content">
+                        <span class="author">
+                            <%= info[i].name%></span>
+                        <h1 class="title">Booking Info
+                            <span>
+                                <button class="btn handelBookingCart">Delete</button>
+                            </span>
+                        </h1>
+                        <div class="text">
+                            <p class="delStore_id">Store <%= info[i].store_id%></p>
+                            <p class="delDay">Day <%= info[i].day%></p>
+                            <p class="delTime">Time <%= info[i].time%></p>
+                            <p>Capacity <%= info[i].capacity%></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+    <%}%>
+
+    <script>
+        let handelBookingCart = document.querySelectorAll('.handelBookingCart');
+        let delStore_id = document.querySelectorAll('.delStore_id');
+        let delDay = document.querySelectorAll('.delDay');
+        let delTime = document.querySelectorAll('.delTime');
+        let hiddenEmail = document.querySelector('#statusUser');
+        let cartdelete = document.querySelectorAll('.cartdelete');
+
+        for (let i = 0; i < handelBookingCart.length; i++) {
+            handelBookingCart[i].onclick = () => {
+                //console.log(getDeleteBooking(delStore_id[i].innerHTML, delDay[i].innerHTML, delTime[i].innerHTML, hiddenEmail.innerHTML));
+                postDeleteBooking(getDeleteBooking(delStore_id[i].innerHTML, delDay[i].innerHTML, delTime[i].innerHTML, hiddenEmail.innerHTML), i);              
+            };
+        }
+
+        let postDeleteBooking = (getDeleteBooking, indexCartdelete) => {
+            $.ajax({
+                type: "POST",
+                url: '/bookingcart/delbooking',
+                data: JSON.stringify(getDeleteBooking),
+                contentType: 'application/json',
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    cartdelete[indexCartdelete].remove();
+                },
+                error: function (error) {
+                    alert(error);
+                }
+            });
+        };
+
+        let getDeleteBooking = (store_id, date, time, email) => {
+            return {
+                id: format(store_id),
+                date: format(date),
+                time: format(time),
+                email: email
+            }
+        };
+
+        let format = (str) => {
+            return str.split(' ')[1];
+        }
+    </script>
+</body>
+
+</html>

@@ -3,6 +3,8 @@ mongoose.connect('mongodb://mcdonald:anhlocanh97@ds141674.mlab.com:41674/mcdonal
     useNewUrlParser: true
 });
 
+const userBooking = require('./installUserBooking');
+
 let StoreSchema = new mongoose.Schema({
     id: String,
     time: Array,
@@ -40,17 +42,6 @@ async function getValidStore(store_id, day) {
         });
     }
     return store;
-}
-
-//lấy store vị trí 0
-async function findValidTable(store, time) {
-    //vị trí time trong chuỗi
-    let index = store.time.indexOf(time);
-    for (let i = 0; i < 2; i++) {
-        if (store['today'][`tb${i+1}`].status[index] == false && store['today'][`tb${i+1}`].status[index + 3] == false) {
-            console.log(`tb${i+1}`);
-        }
-    }
 }
 
 //cho biết số bàn cần đặt
@@ -129,7 +120,7 @@ async function bookingOrcancel(store_id, tempObj) {
 }
 
 //truyền vào id store, ngày, giờ, số người, username => chỉ cần gọi 1 hàm này
-function bookingProcess(store_id, day, time, capacity, res) {
+function bookingProcess(store_id, day, time, capacity, email, phone, name, res) {
     let amoutOfTables = findAmountOfTables(capacity);
     let indexTime = timeArray.indexOf(time);
     let dayKey = checkDate(day);
@@ -174,22 +165,38 @@ function bookingProcess(store_id, day, time, capacity, res) {
                     });
                 } else {
                     //đủ bàn => đặt bàn
-                    let tempObj = {};
+                    userBooking.findBookedTable(email, time).then((result) => {
+                        if (result.length == 0) {
+                            let tempObj = {};
 
-                    for (let i = 0; i < amoutOfTables; i++) {
-                        objectBookingOrCancel(tempObj, tableArray[i], dayKey, store[0][`${dayKey}`][`${tableArray[i]}`].status, indexTime, true);
-                    }
-                    bookingOrcancel(store[0].id, tempObj).then(() => {
-                        console.log('updated');
-                        //nên trả về mảng các bàn đã đặt để cancel => tableArray.slice(0,amoutOfTables);
-                        res.json({
-                            type: 'valid',
-                            store_id: store_id,
-                            day: day,
-                            time: time,
-                            capacity: capacity,
-                            message: tableArray.slice(0, amoutOfTables)
-                        });
+                            for (let i = 0; i < amoutOfTables; i++) {
+                                objectBookingOrCancel(tempObj, tableArray[i], dayKey, store[0][`${dayKey}`][`${tableArray[i]}`].status, indexTime, true);
+                            }
+
+                            bookingOrcancel(store[0].id, tempObj).then(() => {
+                                console.log('updated');
+                                //nên trả về mảng các bàn đã đặt để cancel => tableArray.slice(0,amoutOfTables);
+                                res.json({
+                                    type: 'valid',
+                                    store_id: store_id,
+                                    day: day,
+                                    time: time,
+                                    capacity: capacity,
+                                    message: tableArray.slice(0, amoutOfTables)
+                                });
+                            });
+
+                            userBooking.saveUserBooking(email, store[0].id, day, time, capacity, phone, name, tableArray.slice(0, amoutOfTables));
+                        } else {
+                            res.json({
+                                type: 'invalid',
+                                store_id: store_id,
+                                day: day,
+                                time: time,
+                                capacity: capacity,
+                                message: 'you have already booked a table'
+                            });
+                        }
                     });
                 }
             }
@@ -197,31 +204,52 @@ function bookingProcess(store_id, day, time, capacity, res) {
     }
 }
 
-function cancelProcess(store_id, day, time, tableArray) {
+function cancelProcess(store_id, day, time, email, res) {
     let indexTime = timeArray.indexOf(time);
     let dayKey = checkDate(day);
+    
     getValidStore(store_id, dayKey).then((store) => {
+        console.log(store);
         if (store.length == 0) {
             //không có cửa hàng để hủy
-            console.log('không có cửa hàng nên ko hủy được');
-            //res.json('something');
+            //console.log('không có cửa hàng nên ko hủy được');
+            res.json({
+                type: 'failure',
+                message: 'no match store'
+            });
         } else {
-            let tempObj = {};
+            userBooking.findBookedTable(email, time).then((result) => {
+                if (result.length == 0) {
+                    //console.log('chua dat nên ko xóa được');
+                    res.json({
+                        type: 'failure',
+                        message: 'no booking yet'
+                    });
+                } else {
+                    //hủy bàn trong cửa hàng
+                    let tempObj = {};
+                    for (let i = 0; i < result[0].table.length; i++) {
+                        objectBookingOrCancel(tempObj, result[0].table[i], dayKey, store[0][`${dayKey}`][`${result[0].table[i]}`].status, indexTime, false);
+                    }
 
-            for (let i = 0; i < tableArray.length; i++) {
-                objectBookingOrCancel(tempObj, tableArray[i], dayKey, store[0][`${dayKey}`][`${tableArray[i]}`].status, indexTime, false);
-            }
+                    bookingOrcancel(store[0].id, tempObj).then(() => {
+                        //console.log('cancel');
+                        res.json({
+                            type: 'successfully',
+                            message: 'deleted'
+                        });
+                    });
 
-            bookingOrcancel(store[0].id, tempObj).then(() => {
-                console.log('cancel');
-                //res.json('something');
+                    //xóa trong userbooking
+                    userBooking.deleteUserBooking(email, time);
+                }
             });
         }
     });
 }
 
 //bookingProcess('store00', '12/26/2018', '00:00', 6, 'res');
-//cancelProcess('store00', '12/26/2018', '00:00', ['tb3', 'tb4']);
+//cancelProcess('store00', '12/28/2018', '07:00', 'loc.nt2138@gmail.com');
 
 module.exports = {
     bookingProcess: bookingProcess,

@@ -9,7 +9,7 @@ const bookingRouter = require('./routes/booking');
 const loginRouter = require('./routes/login');
 const logoutRouter = require('./routes/logout');
 const registerRouter = require('./routes/register');
-const cartRouter = require('./routes/cart');
+const cartRouter = require('./routes/bookingcart');
 const adminRouter = require('./routes/admin');
 
 // init express constructor
@@ -34,7 +34,7 @@ app.use('/booking', bookingRouter);
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
 app.use('/register', registerRouter);
-app.use('/cart', cartRouter);
+app.use('/bookingcart', cartRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler

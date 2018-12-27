@@ -56,13 +56,18 @@ function deleteUserBooking(user_email, time) {
     });
 }
 
-//tìm các đơn mà người dùng đã đặt
-
-
-//deleteUserBooking('user00', '07:00');
+//tìm theo email xem user đã đặt bàn nào
+async function findBookedTableByEmail(email) {
+    //let indexTime = timeArray.indexOf(time);
+    let info = await userBooking.find({
+        email: email
+    });
+    return info;
+}
 
 module.exports = {
     saveUserBooking: saveUserBooking,
     findBookedTable: findBookedTable,
-    deleteUserBooking: deleteUserBooking
+    deleteUserBooking: deleteUserBooking,
+    findBookedTableByEmail: findBookedTableByEmail
 }
