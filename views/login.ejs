@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container anim">
         <div class="card card-login mx-auto text-center bg-light">
             <div class="card-header mx-auto bg-light">
                 <span> <img src="https://www.mcdonalds.com/content/dam/usa/logo/m_logo.png" class="w-75" alt="Logo">
@@ -19,7 +19,7 @@
                 <div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <span class="input-group-text"><i class="fa fa-user-o"></i></span>
                         </div>
                         <input type="text" id="login-email" name="email" class="form-control" placeholder="Email..."
                             required>
@@ -27,7 +27,7 @@
 
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            <span class="input-group-text"><i class="fa fa-key"></i></span>
                         </div>
                         <input type="password" id="login-password" name="password" class="form-control" placeholder="Password..."
                             required>
@@ -78,6 +78,8 @@
         let checkEmpty = (email, password) => {
             return (email.value != '' && password.value != '');
         };
+        window.sr = ScrollReveal();
+        sr.reveal('.anim');
     </script>
 </body>
 
