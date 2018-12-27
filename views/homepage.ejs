@@ -15,8 +15,8 @@
 
   <!-- Header -->
   <br>
-  <header class="w3-display-container w3-content" style="max-width:750; height: auto;">
-    <img class="w3-image" src="../public/images/mcdonal.jpg" alt="McDonald" style="min-width:500" height="200">
+  <header class="w3-display-container w3-content anim" style="max-width:750; height: auto;">
+    <img class="w3-image anim" src="../public/images/mcdonal.jpg" alt="McDonald" style="min-width:500" height="200">
   </header>
 
   <br>
@@ -24,6 +24,7 @@
   <!-- Page content -->
   <%- include('./partials/homepage/page-content') %>
   <!-- End Page content -->
+
 
   <!-- Footer -->
   <%- include('./partials/homepage/footer') %>
@@ -37,6 +38,9 @@
         x.className = "topnav";
       }
     };
+
+    window.sr = ScrollReveal();
+    sr.reveal('.anim');
   </script>
 </body>
 

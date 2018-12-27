@@ -11,7 +11,14 @@
     <%- include('./partials/navbar'); -%>
     <%- include('./partials/booking/form'); -%>
     <%- include('./partials/booking/store'); -%>
-    <script src="../public/javascripts/worker/event.js"></script>
+    <div class="loading-bar">
+
+    </div>
+
+    <!-- Footer -->
+    <%- include('./partials/homepage/footer') %>
+    <!-- End Footer -->
+    <!-- <script src="../public/javascripts/worker/event.js"></script> -->
     <!-- popup form jQuery -->
     <script src="../public/javascripts/animation/animation.js"></script>
 
@@ -24,6 +31,9 @@
                 x.className = "topnav";
             }
         };
+
+        window.sr = ScrollReveal();
+        sr.reveal('.anim');
     </script>
 
     <script src="/socket.io/socket.io.js"></script>
@@ -80,6 +90,7 @@
                     $('html,body').animate({
                         scrollTop: 0
                     }, 'slow');
+                    document.body.className = "loading";
                     $.ajax({
                         type: "POST",
                         url: '/booking/queryUser',
@@ -94,6 +105,7 @@
                             fullnameForm.value = res.fullname;
                             emailForm.value = res.email;
                             phoneForm.value = res.phone;
+                            document.body.className = "";
                         },
                         error: function (error) {
                             alert(error);
@@ -125,6 +137,7 @@
         };
 
         let postFormBooking = (getFormBooking) => {
+                document.body.className = "loading";
                 $.ajax({
                 type: "POST",
                 url: '/booking',
@@ -134,7 +147,6 @@
                 success: function (mess) {
                     let res = JSON.stringify(mess);
                     let info = JSON.parse(res);
-                    console.log(info);
                     let confirmStatus = document.querySelector('#confirm-status');
                     if(info.type == 'valid'){
                         let infoOrder = document.querySelector('#info-order');
@@ -158,10 +170,11 @@
                         infoConfirm.style.display = 'block';
 
                         socket.emit('db-onchange', JSON.stringify(info));
-                        
+                        document.body.className = "";
                     } else {
                         alert(info.message);
                         confirmStatus.innerHTML = info.type;
+                        document.body.className = "";
                     }
                 },
                 error: function (error) {

@@ -9,11 +9,14 @@
 
 <body>
     <%- include('./partials/navbar.ejs')%>
-    <p>Booking Cart</p>
+    <p style="text-align:center;margin-top:3%;font-size:35px;">Booking Cart</p>
+    <div class="loading-bar">
+
+    </div>
     <%if(info.length == 0){%>
     <p>There is no tale booked</p>
     <%} else {%>
-    <div class="row">
+    <div class="row anim">
         <% for(var i=0; i < info.length; i++){ %>
         <div class="table card cartdelete">
             <div class="wrapper">
@@ -28,7 +31,7 @@
                             <%= info[i].name%></span>
                         <h1 class="title">Booking Info
                             <span>
-                                <button class="btn handelBookingCart">Delete</button>
+                                <button class="btn handelBookingCart"><i class="fa fa-remove"style="color:darkred"></i>Delete</button>
                             </span>
                         </h1>
                         <div class="text">
@@ -44,6 +47,9 @@
         <%}%>
     </div>
     <%}%>
+    <!-- Footer -->
+    <%- include('./partials/homepage/footer') %>
+    <!-- End Footer -->
 
     <script>
         let handelBookingCart = document.querySelectorAll('.handelBookingCart');
@@ -63,6 +69,7 @@
         }
 
         let postDeleteBooking = (getDeleteBooking, indexCartdelete) => {
+            document.body.className = "loading";
             $.ajax({
                 type: "POST",
                 url: '/bookingcart/delbooking',
@@ -72,6 +79,7 @@
                 success: function (res) {
                     console.log(res);
                     cartdelete[indexCartdelete].remove();
+                    document.body.className = "";
                 },
                 error: function (error) {
                     alert(error);
@@ -91,6 +99,9 @@
         let format = (str) => {
             return str.split(' ')[1];
         }
+
+        window.sr = ScrollReveal();
+        sr.reveal('.anim');
     </script>
 </body>
 
